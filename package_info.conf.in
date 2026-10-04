@@ -1,0 +1,35 @@
+[Package]
+name = akvirtualcamera
+targetPlatform = @TARGET_PLATFORM@
+debug = @PACKAGE_IS_DEBUG@
+sourcesDir = @CMAKE_SOURCE_DIR@
+mainExecutable = @MAIN_EXECUTABLE@
+libDir = @APP_LIBDIR@
+buildInfoFile = @BUILD_INFO_FILE@
+targetArch = @TARGET_ARCH@
+version = @VERSION@
+outputFormats = @OUTPUT_FORMATS@
+hideArch = @PACKET_HIDE_ARCH@
+writeLauncher = false
+dailyBuild = @DAILY_BUILD@
+buildType = @CMAKE_BUILD_TYPE@
+
+[MacPkg]
+appName = AkVirtualCamera
+productTitle = AkVirtualCamera
+description = Virtual Camera for Mac
+identifier = org.webcamoidprj.AkVirtualCamera
+subFolder = AkVirtualCamera
+licenseFile = COPYING
+installScripts = ports/deploy/mac/installScripts
+uninstallScript = ports/deploy/mac/uninstall.sh
+
+[Nsis]
+organization = Webcamoid
+appName = AkVirtualCamera
+productVersion = @VERSION@.0
+description = AkVirtualCamera, virtual camera for Mac and Windows
+license = COPYING
+requiresAdminRights = true
+multiUserInstall = false
+script = ports/deploy/installscript.nsi

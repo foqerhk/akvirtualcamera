@@ -1,0 +1,72 @@
+akvirtualcamera 9.4.0:
+
+- Microsoft Media Foundation virtual camera is now working.
+- Added support for CMIO media extensions, not tested but shuold work, maybe.
+- Distributing Mac packages as Makeself instead of pkg.
+
+akvirtualcamera 9.3.3:
+
+- The DirectShow virtual camera code was simplified and implemented all
+  interfaces properly, it should be more compatible now.
+- Media Foundation virtual camera is not even near usable yet. Need some help
+  here.
+
+akvirtualcamera 9.3.2:
+
+- Applied some fixes to the Media Foundation virtual camera.
+- Media Foundation is now optional in the installer, and marked as experimental.
+- Prevent opening multiple instances of the assistant.
+
+akvirtualcamera 9.3.1:
+
+- Fixed Windows packages build.
+
+akvirtualcamera 9.3.0:
+
+- Added support for Microsoft Media Foundation.
+- Added stream-pattern to the manager, for sending a testing pattern the virtual
+  camera without requiring a real source.
+- Added a testing program for DirectShow and Media Foundation.
+- Now the input stream support many popular RGB and YUV formats.
+- Video frames can be sent either using shared memory (default) or sockets.
+- Removed RGB 16 bits formats support in Windows.
+- Added direct mode (pass-through) support for sending the frames as-is, as
+  fast as possible.
+
+akvirtualcamera 9.2.0:
+
+- Using sockets as IPC mechanism.
+- Added FAKE_APPLE build option, this will allow to test the plugin in, for
+  example, Linux platforms.
+- Added a simple C API library to communicate with the virtual camera.
+
+akvirtualcamera 9.1.3:
+
+- Quote file path if it contains spaces (issue #75).
+- Added --build-info flag.
+
+akvirtualcamera 9.1.2:
+
+- Added ARM 64 packages for Mac.
+
+akvirtualcamera 9.1.1:
+
+- Mark Mac packages architecture.
+
+akvirtualcamera 9.1.0:
+
+- Added -f, --force flags to the manager, this bypass the virtual camera usage
+  check.
+- Fixed output example in Windows.
+- Now distributing the Mac installer as a pkg.
+
+akvirtualcamera 9.0.0:
+
+- Code forked from Webcamoid. This virtual camera isn't compatible with
+  Webcamoid 8.x and older releases.
+- Build system switched to Cmake.
+- Fixed plugins installers and switched to NSIS in Windows.
+- Added a command line tool to communicate with the virtual camera
+  (AkVCamManager).
+- Added support for PNG and JPG for the placeholder picture.
+- Added documentation and example usages.
